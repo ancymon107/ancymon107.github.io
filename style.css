@@ -1,125 +1,237 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
-video {
-  object-fit: cover;
-  height: 100vh;
-  width: 100%;
+  font-family: "Poppins";
+  transition: all 0.6s !important;
+  opacity: 1;
 }
 
 body {
-  display: grid;
-  justify-content: center;
-  background-color: black;
-  width: 100%;
-  height: 100vh;
-}
-.lol {
-  animation: rainbow-bg 2s infinite;
+  background-color: #0e0d13;
 }
 
+.hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+h2,
 p,
 h1 {
-  animation: rainbow 2s infinite;
-  font-size: 16px;
-  background-color: none !important;
+  color: white;
+  cursor: default;
 }
 
-img {
-  object-fit: fill;
+a {
+  text-decoration: none;
+}
+
+.banner {
+  background-image: url("./img/bannigga.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
   height: 100vh;
 }
-.box {
-  position: fixed;
+
+.banner::after {
+  content: "Nigga Party";
+  color: #ffffffbd;
+  font-weight: 700;
+  font-size: 10rem;
+}
+
+.best {
+  margin-top: 5vh;
+  padding-bottom: 20vh;
+}
+
+.best > h1 {
+  font-size: 100px;
   text-align: center;
+  margin-bottom: 5px;
+}
+
+.best h2 {
+  font-size: 50px;
+  text-align: center;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.best h2::before {
+  content: "";
+  background: url("./img/symboligga.png");
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  background-size: cover;
+  display: block;
+}
+.best p {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.op,
+.op-2,
+.op-3,
+.op-4 {
+  background-image: url("./img/partigga.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.op-2 {
+  background-image: url("./img/trigga.jpg") !important;
+}
+
+.op-3 {
+  background-image: url("./img/pooligga.jpg") !important  ;
+}
+
+.op-4 {
+  cursor: pointer !important;
+  background-image: url("./img/kkkigga.jpg") !important  ;
+}
+
+.op-4 h1 {
+  cursor: pointer !important;
+}
+
+.op div,
+.op-2 div,
+.op-3 div,
+.op-4 div {
   width: 100%;
-  height: 100vh;
-  top: 50%;
-  left: 50%;
-  margin-left: -50%;
-  margin-top: -15vh;
-  color: white !important;
+  height: 100%;
+  background-color: #000000a9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes rainbow-bg {
-  100%,
-  0% {
-    background-color: rgb(255, 0, 0);
+.op div h1,
+.op-2 div h1,
+.op-3 div h1,
+.op-4 div h1 {
+  font-size: 120px;
+  text-align: center;
+}
+
+.ceo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+.ceo > img {
+  width: 300px;
+  border-radius: 80px;
+}
+
+.ceo > div > h2 {
+  font-size: 60px;
+  margin-left: 40px;
+}
+
+.ceo > div > p {
+  margin-left: 40px;
+}
+
+.team {
+  margin-top: 10vh;
+  font-size: 100px;
+  margin-bottom: 2vh;
+}
+.ourteam {
+  display: grid;
+  justify-items: center;
+  padding-bottom: 10vh;
+  height: auto !important;
+}
+
+@media (max-width: 1332px) {
+  .team {
+    font-size: 50px;
   }
-  8% {
-    background-color: rgb(255, 127, 0);
+  .banner::after {
+    font-size: 100px;
   }
-  16% {
-    background-color: rgb(255, 255, 0);
+  .best > h1 {
+    font-size: 60px;
   }
-  25% {
-    background-color: rgb(127, 255, 0);
+  .best h2 {
+    font-size: 30px;
   }
-  33% {
-    background-color: rgb(0, 255, 0);
+  .best p {
+    font-size: 30px;
   }
-  41% {
-    background-color: rgb(0, 255, 127);
+  .ceo > div > p {
+    font-size: 30px;
   }
-  50% {
-    background-color: rgb(0, 255, 255);
+  .ceo > div > h2 {
+    font-size: 40px;
   }
-  58% {
-    background-color: rgb(0, 127, 255);
+  .op div h1,
+  .op-2 div h1,
+  .op-3 div h1,
+  .op-4 div h1 {
+    font-size: 60px;
   }
-  66% {
-    background-color: rgb(0, 0, 255);
+
+  .best h2::before {
+    width: 15px;
+    height: 15px;
   }
-  75% {
-    background-color: rgb(127, 0, 255);
-  }
-  83% {
-    background-color: rgb(255, 0, 255);
-  }
-  91% {
-    background-color: rgb(255, 0, 127);
+  .ceo > img {
+    width: 250px;
+    border-radius: 80px;
   }
 }
 
-@keyframes rainbow {
-  100%,
-  0% {
-    color: rgb(255, 0, 0);
+@media (max-width: 1000px) {
+  .ceo > img {
+    width: 100px;
+    border-radius: 20px;
+    height: 100px;
   }
-  8% {
-    color: rgb(255, 127, 0);
+
+  .banner::after {
+    font-size: 50px;
   }
-  16% {
-    color: rgb(255, 255, 0);
+  .best > h1 {
+    font-size: 50px;
   }
-  25% {
-    color: rgb(127, 255, 0);
+  .best h2 {
+    font-size: 20px;
   }
-  33% {
-    color: rgb(0, 255, 0);
+  .best p {
+    font-size: 20px;
   }
-  41% {
-    color: rgb(0, 255, 127);
+  .ceo > div > p {
+    font-size: 20px;
   }
-  50% {
-    color: rgb(0, 255, 255);
+  .ceo > div > h2 {
+    font-size: 30px;
   }
-  58% {
-    color: rgb(0, 127, 255);
-  }
-  66% {
-    color: rgb(0, 0, 255);
-  }
-  75% {
-    color: rgb(127, 0, 255);
-  }
-  83% {
-    color: rgb(255, 0, 255);
-  }
-  91% {
-    color: rgb(255, 0, 127);
+  .op div h1,
+  .op-2 div h1,
+  .op-3 div h1,
+  .op-4 div h1 {
+    font-size: 50px;
   }
 }
