@@ -18,3 +18,7 @@ function setup() {
   const paras = document.querySelectorAll(".hidden");
   paras.forEach((p) => obs.observe(p));
 }
+
+function loaded() {
+  document.querySelector(".loading").style = "transform: translateY(-100vh)";
+}
